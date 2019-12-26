@@ -3,4 +3,4 @@
 [![Build Status](https://travis-ci.com/sergeiwerty/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/sergeiwerty/frontend-project-lvl1)
 
 How to install "Brain Games!". 
-https://asciinema.org/a/7GPFaKuDyKkLH2mggvm3c1c8U
+<a href="https://asciinema.org/a/7GPFaKuDyKkLH2mggvm3c1c8U" target="_blank"><img src="https://asciinema.org/a/7GPFaKuDyKkLH2mggvm3c1c8U.svg" /></a>
