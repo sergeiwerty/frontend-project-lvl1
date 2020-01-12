@@ -1,6 +1,9 @@
 import readlineSync from 'readline-sync';
-import { nameRequest } from '../index';
-import greeting from '../index';
+import { nameRequest, greeting } from '../index';
+
+// const greetingTheUser = greeting();
+
+// import greeting from '../index';
 
 const greetingTheUser = greeting();
 
