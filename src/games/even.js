@@ -5,7 +5,7 @@ import { nameRequest, greeting } from '../index';
 
 // import greeting from '../index';
 
-const greetingTheUser = greeting();
+greeting();
 
 const evenGame = () => {
   const generateRandomNum = () => {

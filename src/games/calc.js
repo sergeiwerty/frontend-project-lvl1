@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { nameRequest, greeting } from '../index';
 
-const greetingTheUser = greeting();
+greeting();
 
 const calcGame = () => {
   const generateRandomNum = () => {
@@ -24,10 +24,21 @@ const calcGame = () => {
       const firstOperand = generateRandomNum();
       const secondOperand = generateRandomNum();
       const operator = generateRandomOperation();
-      const correctOperationRusult = (`${firstOperand} ${operator} ${secondOperand}`);
-      const answerRequest = readlineSync.question(`Question: ${firstOperand} ${operator} ${secondOperand}`);
-      if (answerRequest !== correctOperationRusult) {
-        console.log(`${answerRequest} is wrong answer ;(. Correct answer was ${correctOperationRusult}.\nLet's try again, ${nameRequest}!`);
+      const correctOperationResult = () => {
+        switch (operator) {
+          case '+':
+            return firstOperand + secondOperand;
+          case '-':
+            return firstOperand - secondOperand;
+          case '*':
+            return firstOperand * secondOperand;
+          default:
+            return (`${firstOperand} ${operator} ${secondOperand}`);
+        }
+      };
+      const answerRequest = Number(readlineSync.question(`Question: ${firstOperand} ${operator} ${secondOperand}`));
+      if (answerRequest !== correctOperationResult()) {
+        console.log(`${answerRequest} is wrong answer ;(. Correct answer was ${correctOperationResult()}.\nLet's try again, ${nameRequest}!`);
         break;
       } else {
         console.log('Correct!');

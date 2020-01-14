@@ -1,5 +1,5 @@
 publish:
-	npx publish --dry-run
+	npm publish --dry-run
 install:
 	npm install
 make start:
