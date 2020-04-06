@@ -7,3 +7,15 @@ How to install "Brain Games!".
 
 How to play "Even-game"
 <a href="https://asciinema.org/a/tLUT0JlkRFrthA6bV4FXm4BDC" target="_blank"><img src="https://asciinema.org/a/tLUT0JlkRFrthA6bV4FXm4BDC.svg" /></a>
+
+How to play "Calc-game"
+<a href="https://asciinema.org/a/3VcMaxqMk7YXu9kDC1JZzrMoP" target="_blank"><img src="https://asciinema.org/a/3VcMaxqMk7YXu9kDC1JZzrMoP.svg" /></a>
+
+How to play "GCD-game"
+<a href="https://asciinema.org/a/LsgFfxp6Tg1K6sL6iGVKpbIVj" target="_blank"><img src="https://asciinema.org/a/LsgFfxp6Tg1K6sL6iGVKpbIVj.svg" /></a>
+
+How to play "Progression-game"
+<a href="https://asciinema.org/a/qcQfS6ge9uUHaBiKuhSFGchQf" target="_blank"><img src="https://asciinema.org/a/qcQfS6ge9uUHaBiKuhSFGchQf.svg" /></a>
+
+How to play "Prime-game"
+<a href="https://asciinema.org/a/3qcyyba4QCa5i1ITYZqZeQvXl" target="_blank"><img src="https://asciinema.org/a/3qcyyba4QCa5i1ITYZqZeQvXl.svg" /></a>
