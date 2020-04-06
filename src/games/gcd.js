@@ -33,7 +33,7 @@ const gcdGame = () => {
       const pair = getPair(generateRandomNum(), generateRandomNum());
       const answerRequest = Number(readlineSync.question(`Question: ${car(pair)} ${cdr(pair)}`));
       if (answerRequest !== gcdCalc(pair)) {
-        console.log(`${answerRequest} is wrong answer ;(. Correct answer was ${gcdCalc(pair)}  //.\nLet's try again, ${nameRequest}!`);
+        console.log(`${answerRequest} is wrong answer ;(. Correct answer was ${gcdCalc(pair)}.\nLet's try again, ${nameRequest}!`);
         break;
       } else {
         console.log('Correct!');
