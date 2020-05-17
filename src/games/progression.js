@@ -1,14 +1,9 @@
-import readlineSync from 'readline-sync';
-import { nameRequest, greeting } from '../index';
+import generateRandomNum from '../accessory';
+import iterationRepeater from '..';
 
-greeting();
+const descriptionOfGame = 'What number is missing in the progression?';
 
-const progressionGame = () => {
-  const generateRandomNum = (min = 1, max = 100) => {
-    const random = Math.floor(Math.random() * (max - min)) + min;
-    return random;
-  };
-
+const progressionGameResult = () => {
   const initSymbolOfProgression = generateRandomNum();
 
   const progressionArrConstructing = (initSymbol, step) => {
@@ -46,35 +41,26 @@ const progressionGame = () => {
 
   const showArr = hideProgressionNum(progressArr());
 
-  const comparesWithAnswer = (arr, hiddenArr) => {
-    const returnsComparesRusult = () => {
-      const returnHiddenIndex = () => {
-        let index = 0;
-        const findIndex = () => {
-          for (const i of hiddenArr()) {
-            if (i === '..') {
-              break;
-            }
-            index += 1;
+  const returnsComparesRusult = () => {
+    const returnHiddenIndex = () => {
+      let index = 0;
+      const findIndex = () => {
+        for (const i of showArr()) {
+          if (i === '..') {
+            break;
           }
-          return index;
-        };
-        return findIndex;
+          index += 1;
+        }
+        return index;
       };
-      const returnIndex = returnHiddenIndex();
-      const answerRequest = Number(readlineSync.question(`Question: ${hiddenArr()}`));
-      const indexValueForCompare = arr()[returnIndex()];
-      if (answerRequest !== indexValueForCompare) {
-        console.log(`${answerRequest} is wrong answer ;(. Correct answer was ${indexValueForCompare}.\nLet's try again, ${nameRequest}!`);
-      } else {
-        console.log('Correct!');
-        console.log(`Congratulations, ${nameRequest}`);
-      }
+      return findIndex;
     };
-    return returnsComparesRusult;
+    const returnIndex = returnHiddenIndex();
+    const question = showArr();
+    const correctAnswer = progressArr()[returnIndex()];
+    return { question, correctAnswer };
   };
-  const callFunction = comparesWithAnswer(progressArr, showArr);
-  return callFunction();
+  return returnsComparesRusult();
 };
 
-export default progressionGame;
+export default () => iterationRepeater(descriptionOfGame, progressionGameResult);

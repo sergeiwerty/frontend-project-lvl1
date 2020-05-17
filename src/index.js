@@ -11,7 +11,7 @@ const iterationRepeater = (descriptionOfGame, gameExecution) => {
   for (let i = 1; i <= roundsCount; i += 1) {
     const { question, correctAnswer } = gameExecution();
     const answerRequest = readlineSync.question(`Question: ${question}`);
-    if (answerRequest !== correctAnswer) {
+    if (answerRequest !== String(correctAnswer)) {
       console.log(`${answerRequest} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${nameRequest}!`);
       break;
     } else {
