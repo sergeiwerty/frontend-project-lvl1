@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import { nameRequest, greeting } from '../index';
+import { nameRequest } from '../index';
 
-greeting();
+// greeting();
 
 const calcGame = () => {
   const generateRandomNum = () => {

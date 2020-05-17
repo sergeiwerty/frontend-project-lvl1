@@ -11,6 +11,16 @@
     "type": "git",
     "url": "git+https://github.com/sergeiwerty/frontend-project-lvl1.git"
   },
+  "keywords": [
+    "games",
+    "brain",
+    "calculate",
+    "gcd",
+    "even",
+    "prime",
+    "progression",
+    "math"
+  ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
