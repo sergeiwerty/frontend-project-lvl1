@@ -1,13 +1,8 @@
 import { cons, car, cdr } from '@hexlet/pairs';
-import generateRandomNum from '../accessory';
+import generateRandomNum from '../utils';
 import iterationRepeater from '..';
 
-const descriptionOfGame = 'Find the greatest common divisor of given numbers.';
-
-const getPair = (random1, random2) => {
-  const pair = cons(random1, random2);
-  return pair;
-};
+const description = 'Find the greatest common divisor of given numbers.';
 
 const gcdCalc = (pair) => {
   const lesserOfTwo = Math.min(car(pair), cdr(pair));
@@ -20,11 +15,12 @@ const gcdCalc = (pair) => {
   return gcdCalc(intermediatePair);
 };
 
-const gcdGameRusult = () => {
-  const pair = getPair(generateRandomNum(), generateRandomNum());
-  const question = `${car(pair)} ${cdr(pair)}`;
-  const correctAnswer = gcdCalc(pair);
+const getData = () => {
+  const firstNum = generateRandomNum();
+  const secondNum = generateRandomNum();
+  const question = `${firstNum} ${secondNum}`;
+  const correctAnswer = String(gcdCalc(cons(firstNum, secondNum)));
   return { question, correctAnswer };
 };
 
-export default () => iterationRepeater(descriptionOfGame, gcdGameRusult);
+export default () => iterationRepeater(description, getData);

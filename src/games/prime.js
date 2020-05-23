@@ -1,33 +1,32 @@
-import generateRandomNum from '../accessory';
+import generateRandomNum from '../utils';
 import iterationRepeater from '..';
 
-const descriptionOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const primeGameRusult = () => {
-  const randomNum = generateRandomNum();
-  const returnsRusult = () => {
-    const isPrimePredicate = (num) => {
-      if (num === 2) {
-        return true;
-      }
-      for (let j = 2; j < num; j += 1) {
-        if (num % j === 0) {
-          return false;
-        }
-      }
+const getData = () => {
+  const num = generateRandomNum();
+
+  const isPrimePredicate = (number) => {
+    if (number === 2) {
       return true;
-    };
-    const isPrimeCheck = (num) => {
-      if (isPrimePredicate(num)) {
-        return 'yes';
+    }
+    if (number === 1) {
+      return false;
+    }
+    for (let j = 2; j < number; j += 1) {
+      if (number % j === 0) {
+        return false;
       }
-      return 'no';
-    };
-    const question = randomNum;
-    const correctAnswer = isPrimeCheck(randomNum);
+    }
+    return true;
+  };
+
+  const returnsRusult = () => {
+    const question = num;
+    const correctAnswer = isPrimePredicate(num) ? 'yes' : 'no';
     return { question, correctAnswer };
   };
   return returnsRusult();
 };
 
-export default () => iterationRepeater(descriptionOfGame, primeGameRusult);
+export default () => iterationRepeater(description, getData);

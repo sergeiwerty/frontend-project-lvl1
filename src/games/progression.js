@@ -1,9 +1,9 @@
-import generateRandomNum from '../accessory';
+import generateRandomNum from '../utils';
 import iterationRepeater from '..';
 
-const descriptionOfGame = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
-const progressionGameResult = () => {
+const getData = () => {
   const initSymbolOfProgression = generateRandomNum();
 
   const progressionArrConstructing = (initSymbol, step) => {
@@ -32,7 +32,7 @@ const progressionGameResult = () => {
     const arr = passedArr;
     const hiddenIndex = generateIndexOfHiddenNum();
     const returnsResultArr = () => {
-      arr[+`${hiddenIndex}` - 1] = '..';
+      arr[+`${hiddenIndex}`] = '..';
       const resultArr = arr;
       return resultArr;
     };
@@ -47,7 +47,7 @@ const progressionGameResult = () => {
       const findIndex = () => {
         for (const i of showArr()) {
           if (i === '..') {
-            break;
+            return index;
           }
           index += 1;
         }
@@ -57,10 +57,10 @@ const progressionGameResult = () => {
     };
     const returnIndex = returnHiddenIndex();
     const question = showArr();
-    const correctAnswer = progressArr()[returnIndex()];
+    const correctAnswer = String(progressArr()[returnIndex()]);
     return { question, correctAnswer };
   };
   return returnsComparesRusult();
 };
 
-export default () => iterationRepeater(descriptionOfGame, progressionGameResult);
+export default () => iterationRepeater(description, getData);

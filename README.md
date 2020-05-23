@@ -6,16 +6,16 @@ How to install "Brain Games!".
 <a href="https://asciinema.org/a/7GPFaKuDyKkLH2mggvm3c1c8U" target="_blank"><img src="https://asciinema.org/a/7GPFaKuDyKkLH2mggvm3c1c8U.svg" /></a>
 
 How to play "Even-game"
-<a href="https://asciinema.org/a/tLUT0JlkRFrthA6bV4FXm4BDC" target="_blank"><img src="https://asciinema.org/a/tLUT0JlkRFrthA6bV4FXm4BDC.svg" /></a>
+<a href="https://asciinema.org/a/mhM9XtlENE4lVzCWnQiJqgrEJ" target="_blank"><img src="https://asciinema.org/a/mhM9XtlENE4lVzCWnQiJqgrEJ.svg" /></a>
 
 How to play "Calc-game"
-<a href="https://asciinema.org/a/3VcMaxqMk7YXu9kDC1JZzrMoP" target="_blank"><img src="https://asciinema.org/a/3VcMaxqMk7YXu9kDC1JZzrMoP.svg" /></a>
+<a href="https://asciinema.org/a/ozvSOX1FnyJ32sVmJyWlczqsI" target="_blank"><img src="https://asciinema.org/a/ozvSOX1FnyJ32sVmJyWlczqsI.svg" /></a>
 
 How to play "GCD-game"
-<a href="https://asciinema.org/a/LsgFfxp6Tg1K6sL6iGVKpbIVj" target="_blank"><img src="https://asciinema.org/a/LsgFfxp6Tg1K6sL6iGVKpbIVj.svg" /></a>
+<a href="https://asciinema.org/a/TW32Q0XH6rFqqFw8X2n3HlkZ4" target="_blank"><img src="https://asciinema.org/a/TW32Q0XH6rFqqFw8X2n3HlkZ4.svg" /></a>
 
 How to play "Progression-game"
-<a href="https://asciinema.org/a/qcQfS6ge9uUHaBiKuhSFGchQf" target="_blank"><img src="https://asciinema.org/a/qcQfS6ge9uUHaBiKuhSFGchQf.svg" /></a>
+<a href="https://asciinema.org/a/topqLvZMa5A0h1XaDlL9ON7Sp" target="_blank"><img src="https://asciinema.org/a/topqLvZMa5A0h1XaDlL9ON7Sp.svg" /></a>
 
 How to play "Prime-game"
-<a href="https://asciinema.org/a/3qcyyba4QCa5i1ITYZqZeQvXl" target="_blank"><img src="https://asciinema.org/a/3qcyyba4QCa5i1ITYZqZeQvXl.svg" /></a>
+<a href="https://asciinema.org/a/PECZ74MQRqu1g4M9INqOte1c4" target="_blank"><img src="https://asciinema.org/a/PECZ74MQRqu1g4M9INqOte1c4.svg" /></a>

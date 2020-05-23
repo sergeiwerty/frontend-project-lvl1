@@ -1,7 +1,7 @@
-import generateRandomNum from '../accessory';
+import generateRandomNum from '../utils';
 import iterationRepeater from '..';
 
-const descriptionOfGame = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const generateRandomOperation = () => {
   const string = '+-*';
@@ -28,8 +28,8 @@ const calcGameRusult = () => {
     }
   };
   const question = `${firstOperand} ${operator} ${secondOperand}`;
-  const correctAnswer = correctOperationResult();
+  const correctAnswer = String(correctOperationResult());
   return { question, correctAnswer };
 };
 
-export default () => iterationRepeater(descriptionOfGame, calcGameRusult);
+export default () => iterationRepeater(description, calcGameRusult);

@@ -1,20 +1,14 @@
-import generateRandomNum from '../accessory';
+import generateRandomNum from '../utils';
 import iterationRepeater from '..';
 
-const descriptionOfGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isOddNumber = (random) => {
-  let correctAnswer = 'no';
-  if (random % 2 === 0) {
-    correctAnswer = 'yes';
-  }
-  return correctAnswer;
-};
+const isOddNumber = (random) => random % 2 === 0;
 
-const evenGameResult = () => {
+const getData = () => {
   const question = generateRandomNum();
-  const correctAnswer = isOddNumber(question);
+  const correctAnswer = isOddNumber(question) ? 'yes' : 'no';
   return { question, correctAnswer };
 };
 
-export default () => iterationRepeater(descriptionOfGame, evenGameResult);
+export default () => iterationRepeater(description, getData);
