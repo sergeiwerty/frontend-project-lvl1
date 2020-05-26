@@ -1,35 +1,37 @@
 import generateRandomNum from '../utils';
-import iterationRepeater from '..';
+import runEngine from '..';
 
 const description = 'What is the result of the expression?';
 
+const operators = '+-*';
+
 const generateRandomOperation = () => {
-  const string = '+-*';
   const min = 0;
   const max = 2;
-  const random = Math.floor(Math.random() * (max - min)) + min;
-  return string[random];
+  const random = generateRandomNum(min, max);
+  return operators[random];
 };
 
-const calcGameRusult = () => {
-  const firstOperand = generateRandomNum();
-  const secondOperand = generateRandomNum();
+const correctOperationResult = (operator, operand1, operand2) => {
+  switch (operator) {
+    case '+':
+      return operand1 + operand2;
+    case '-':
+      return operand1 - operand2;
+    case '*':
+      return operand1 * operand2;
+    default:
+      throw new Error(`Unknown operator: '${operator}'!`);
+  }
+};
+
+const getRoundData = () => {
+  const operand1 = generateRandomNum();
+  const operand2 = generateRandomNum();
   const operator = generateRandomOperation();
-  const correctOperationResult = () => {
-    switch (operator) {
-      case '+':
-        return firstOperand + secondOperand;
-      case '-':
-        return firstOperand - secondOperand;
-      case '*':
-        return firstOperand * secondOperand;
-      default:
-        return (`${firstOperand} ${operator} ${secondOperand}`);
-    }
-  };
-  const question = `${firstOperand} ${operator} ${secondOperand}`;
-  const correctAnswer = String(correctOperationResult());
+  const question = `${operand1} ${operator} ${operand2}`;
+  const correctAnswer = String(correctOperationResult(operator, operand1, operand2));
   return { question, correctAnswer };
 };
 
-export default () => iterationRepeater(description, calcGameRusult);
+export default () => runEngine(description, getRoundData);

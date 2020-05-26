@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const roundsCount = 3;
 
-const iterationRepeater = (description, gameExecution) => {
+const runEngine = (description, gameExecution) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
@@ -21,4 +21,4 @@ const iterationRepeater = (description, gameExecution) => {
   console.log(`Congratulations, ${userName}`);
 };
 
-export default iterationRepeater;
+export default runEngine;

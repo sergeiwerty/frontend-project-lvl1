@@ -1,9 +1,9 @@
 import generateRandomNum from '../utils';
-import iterationRepeater from '..';
+import runEngine from '..';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isOddNumber = (random) => random % 2 === 0;
+const isOddNumber = (num) => num % 2 === 0;
 
 const getData = () => {
   const question = generateRandomNum();
@@ -11,4 +11,4 @@ const getData = () => {
   return { question, correctAnswer };
 };
 
-export default () => iterationRepeater(description, getData);
+export default () => runEngine(description, getData);

@@ -1,26 +1,24 @@
-import { cons, car, cdr } from '@hexlet/pairs';
 import generateRandomNum from '../utils';
-import iterationRepeater from '..';
+import runEngine from '..';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const gcdCalc = (pair) => {
-  const lesserOfTwo = Math.min(car(pair), cdr(pair));
-  const largerOfTwo = Math.max(car(pair), cdr(pair));
-  if (lesserOfTwo === largerOfTwo) {
-    return lesserOfTwo;
+const gcdCalc = (num1, num2) => {
+  const min = Math.min(num1, num2);
+  const max = Math.max(num1, num2);
+  if (min === max) {
+    return min;
   }
-  const LargerNum = largerOfTwo - lesserOfTwo;
-  const intermediatePair = cons(lesserOfTwo, LargerNum);
-  return gcdCalc(intermediatePair);
+  const largerNum = max - min;
+  return gcdCalc(min, largerNum);
 };
 
-const getData = () => {
+const getRoundData = () => {
   const firstNum = generateRandomNum();
   const secondNum = generateRandomNum();
   const question = `${firstNum} ${secondNum}`;
-  const correctAnswer = String(gcdCalc(cons(firstNum, secondNum)));
+  const correctAnswer = String(gcdCalc(firstNum, secondNum));
   return { question, correctAnswer };
 };
 
-export default () => iterationRepeater(description, getData);
+export default () => runEngine(description, getRoundData);
