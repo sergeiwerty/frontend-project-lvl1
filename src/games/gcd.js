@@ -4,13 +4,10 @@ import runEngine from '..';
 const description = 'Find the greatest common divisor of given numbers.';
 
 const gcdCalc = (num1, num2) => {
-  const min = Math.min(num1, num2);
-  const max = Math.max(num1, num2);
-  if (min === max) {
-    return min;
+  if (num2 === 0) {
+    return num1;
   }
-  const largerNum = max - min;
-  return gcdCalc(min, largerNum);
+  return gcdCalc(num2, num1 % num2);
 };
 
 const getRoundData = () => {

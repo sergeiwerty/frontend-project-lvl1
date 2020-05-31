@@ -3,7 +3,7 @@ import runEngine from '..';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const isPredicate = (number) => {
+const isPrime = (number) => {
   if (number <= 1) {
     return false;
   }
@@ -17,8 +17,8 @@ const isPredicate = (number) => {
 
 const getRoundData = () => {
   const num = generateRandomNum();
-  const question = num;
-  const correctAnswer = isPredicate(num) ? 'yes' : 'no';
+  const question = String(num);
+  const correctAnswer = isPrime(num) ? 'yes' : 'no';
   return { question, correctAnswer };
 };
 

@@ -6,10 +6,8 @@ const description = 'What is the result of the expression?';
 const operators = '+-*';
 
 const generateRandomOperation = () => {
-  const min = 0;
-  const max = 2;
-  const random = generateRandomNum(min, max);
-  return operators[random];
+  const index = generateRandomNum(0, 2);
+  return operators[index];
 };
 
 const correctOperationResult = (operator, operand1, operand2) => {
