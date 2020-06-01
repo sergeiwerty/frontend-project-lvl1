@@ -5,30 +5,23 @@ const description = 'What number is missing in the progression?';
 
 const progressionLength = 10;
 
-const makeProgression = (initNum, diff) => {
+const makeProgression = (firstMember, diff) => {
   const progression = [];
   for (let index = 0; index < progressionLength; index += 1) {
-    progression[index] = initNum + index * diff;
+    progression[index] = firstMember + index * diff;
   }
   return progression;
 };
 
 const getRoundData = () => {
   const firstMember = generateRandomNum();
-
-  const progressArr = makeProgression(firstMember, generateRandomNum(5, 20));
-
-  const hideProgressionNum = (passedArr) => {
-    const arr = passedArr;
-    const hiddenIndex = generateRandomNum(1, 9);
-    const hiddenNum = arr[hiddenIndex];
-    arr[+`${hiddenIndex}`] = '..';
-    const question = arr.join();
-    const correctAnswer = String(hiddenNum);
-    return { question, correctAnswer };
-  };
-
-  return hideProgressionNum(progressArr);
+  const progression = makeProgression(firstMember, generateRandomNum(5, 20));
+  const hiddenIndex = generateRandomNum(1, progressionLength - 1);
+  const hiddenNum = progression[hiddenIndex];
+  progression[hiddenIndex] = '..';
+  const question = progression.join();
+  const correctAnswer = String(hiddenNum);
+  return { question, correctAnswer };
 };
 
 export default () => runEngine(description, getRoundData);

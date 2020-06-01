@@ -10,7 +10,7 @@ const generateRandomOperation = () => {
   return operators[index];
 };
 
-const correctOperationResult = (operator, operand1, operand2) => {
+const calculate = (operator, operand1, operand2) => {
   switch (operator) {
     case '+':
       return operand1 + operand2;
@@ -28,7 +28,7 @@ const getRoundData = () => {
   const operand2 = generateRandomNum();
   const operator = generateRandomOperation();
   const question = `${operand1} ${operator} ${operand2}`;
-  const correctAnswer = String(correctOperationResult(operator, operand1, operand2));
+  const correctAnswer = String(calculate(operator, operand1, operand2));
   return { question, correctAnswer };
 };
 
